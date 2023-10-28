@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212609",
+  "dto": "mapstruct",
+  "entityTableName": "movie",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "releaseDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Movie",
+  "relationships": [
+    {
+      "otherEntityName": "session",
+      "otherEntityRelationshipName": "movie",
+      "relationshipName": "session",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "casting",
+      "otherEntityRelationshipName": "movie",
+      "relationshipName": "casting",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

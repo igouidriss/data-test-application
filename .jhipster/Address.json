@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212009",
+  "dto": "mapstruct",
+  "entityTableName": "address",
+  "fields": [
+    {
+      "fieldName": "numberStreet",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Address",
+  "relationships": [
+    {
+      "otherEntityName": "cinema",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "cinema",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

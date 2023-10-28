@@ -48,6 +48,20 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Authority.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mycompany.myapp.domain.Address.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Operator.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Cinema.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Cinema.class.getName() + ".rooms");
+            createCache(cm, com.mycompany.myapp.domain.Room.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Room.class.getName() + ".periods");
+            createCache(cm, com.mycompany.myapp.domain.Period.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Session.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Movie.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Movie.class.getName() + ".sessions");
+            createCache(cm, com.mycompany.myapp.domain.Casting.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Casting.class.getName() + ".actors");
+            createCache(cm, com.mycompany.myapp.domain.Actor.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Actor.class.getName() + ".castings");
             // jhipster-needle-ehcache-add-entry
         };
     }

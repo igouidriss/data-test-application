@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212309",
+  "dto": "mapstruct",
+  "entityTableName": "room",
+  "fields": [
+    {
+      "fieldName": "seatsNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "screenHeight",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "screenWidth",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "distance",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Room",
+  "relationships": [
+    {
+      "otherEntityName": "period",
+      "otherEntityRelationshipName": "room",
+      "relationshipName": "period",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cinema",
+      "otherEntityRelationshipName": "room",
+      "relationshipName": "cinema",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

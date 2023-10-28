@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Casting.
+    -->
+    <changeSet id="20231028212709-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="movie_id"
+                                 baseTableName="casting"
+                                 constraintName="fk_casting__movie_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="movie"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="casting_id"
+                                 baseTableName="rel_casting__actors"
+                                 constraintName="fk_rel_casting__actors__casting_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="casting"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="actors_id"
+                                 baseTableName="rel_casting__actors"
+                                 constraintName="fk_rel_casting__actors__actors_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="actor"
+                                 />
+    </changeSet>
+</databaseChangeLog>
