@@ -1,0 +1,74 @@
+
+entity Address {
+	numberStreet String,
+	postalCode String,
+	city String,
+	postalCode String
+}
+
+entity Operator {
+	name String
+}
+
+entity Cinema {
+	name String
+}
+
+entity Room {
+	seatsNumber Integer,
+    screenHeight Integer,
+    screenWidth Integer,
+    distance Integer
+}
+
+entity Period {
+	start ZonedDateTime,
+    end ZonedDateTime
+}
+
+entity Session {
+	startHour Integer
+}
+
+entity Movie {
+	title String,
+	releaseDate LocalDate
+}
+
+entity Casting {
+}
+
+entity Actor {
+	firstName String,
+	lastName String,
+    birthDate LocalDate
+}
+
+relationship OneToOne {
+	Cinema{operator} to Operator{cinema},
+	Cinema{address} to Address{cinema},
+    Session{period} to Period{session}, 
+    Casting{movie} to Movie{casting}
+}
+
+relationship OneToMany {
+	Cinema{room} to Room{cinema},
+    Room{period} to Period{room},
+    Movie{session} to Session{movie}
+}
+
+relationship ManyToMany {
+	Casting{actors} to Actor{castings}
+}
+
+// Set pagination options
+//paginate all with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
