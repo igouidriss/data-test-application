@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212709",
+  "dto": "mapstruct",
+  "entityTableName": "casting",
+  "fields": [],
+  "name": "Casting",
+  "relationships": [
+    {
+      "otherEntityName": "movie",
+      "otherEntityRelationshipName": "casting",
+      "relationshipName": "movie",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "actor",
+      "otherEntityRelationshipName": "castings",
+      "relationshipName": "actors",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

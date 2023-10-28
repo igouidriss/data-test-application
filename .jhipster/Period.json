@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212409",
+  "dto": "mapstruct",
+  "entityTableName": "period",
+  "fields": [
+    {
+      "fieldName": "start",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "end",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "name": "Period",
+  "relationships": [
+    {
+      "otherEntityName": "session",
+      "otherEntityRelationshipName": "period",
+      "relationshipName": "session",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "period",
+      "relationshipName": "room",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

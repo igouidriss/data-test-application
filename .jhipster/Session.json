@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212509",
+  "dto": "mapstruct",
+  "entityTableName": "session",
+  "fields": [
+    {
+      "fieldName": "startHour",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Session",
+  "relationships": [
+    {
+      "otherEntityName": "period",
+      "otherEntityRelationshipName": "session",
+      "relationshipName": "period",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "movie",
+      "otherEntityRelationshipName": "session",
+      "relationshipName": "movie",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

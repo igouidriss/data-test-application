@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212209",
+  "dto": "mapstruct",
+  "entityTableName": "cinema",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Cinema",
+  "relationships": [
+    {
+      "otherEntityName": "operator",
+      "otherEntityRelationshipName": "cinema",
+      "relationshipName": "operator",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "cinema",
+      "relationshipName": "address",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "cinema",
+      "relationshipName": "room",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

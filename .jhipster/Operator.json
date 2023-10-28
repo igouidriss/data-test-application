@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212109",
+  "dto": "mapstruct",
+  "entityTableName": "operator",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Operator",
+  "relationships": [
+    {
+      "otherEntityName": "cinema",
+      "otherEntityRelationshipName": "operator",
+      "relationshipName": "cinema",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

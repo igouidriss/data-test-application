@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20231028212809",
+  "dto": "mapstruct",
+  "entityTableName": "actor",
+  "fields": [
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Actor",
+  "relationships": [
+    {
+      "otherEntityName": "casting",
+      "otherEntityRelationshipName": "actors",
+      "relationshipName": "castings",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
